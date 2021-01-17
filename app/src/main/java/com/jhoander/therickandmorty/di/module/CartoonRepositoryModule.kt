@@ -1,5 +1,6 @@
 package com.jhoander.therickandmorty.di.module
 
+import com.jhoander.therickandmorty.BuildConfig
 import com.jhoander.therickandmorty.data.remote.CartoonApi
 import com.jhoander.therickandmorty.data.repository.CartoonRepository
 import com.jhoander.therickandmorty.data.repository.CartoonRepositoryImp
@@ -24,7 +25,7 @@ class CartoonRepositoryModule {
         OkHttpClient()
         return ApiService.build(
             CartoonApi::class.java,
-            "https://rickandmortyapi.com/api/"
+            BuildConfig.BaseUrl
         )
     }
 }

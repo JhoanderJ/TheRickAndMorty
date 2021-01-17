@@ -18,9 +18,16 @@ android {
     }
 
     buildTypes {
+        debug {
+            buildConfigField 'String', "BaseUrl", BASE_URL
+            resValue 'string', "base_url", BASE_URL
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            buildConfigField 'String', "BaseUrl", BASE_URL
+            resValue 'string', "base_url", BASE_URL
         }
     }
 
