@@ -26,128 +26,107 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/tvName"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:lines="1"
-                android:maxLines="1"
-                android:padding="@dimen/margin_extra_small"
-                android:textColor="@color/colorPrimaryText"
-                android:textSize="@dimen/text_small_size"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/image"
-                app:layout_constraintEnd_toEndOf="@+id/image"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="Alive" />
-
             <ImageView
                 android:id="@+id/image"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:layout_marginBottom="@dimen/margin_small"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/tvLabelStatus"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvName" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/tvLabelStatus"
-                android:layout_width="wrap_content"
+                android:id="@+id/tvName"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_medium"
-                android:paddingStart="@dimen/margin_small"
-                android:paddingEnd="@dimen/margin_small"
-                android:text="@string/label_status"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:gravity="fill"
                 android:textColor="@color/colorPrimaryText"
-                android:textSize="@dimen/text_size"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/tvLabelSpecie"
-                app:layout_constraintEnd_toStartOf="@+id/tvStatus"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/image"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="@+id/image"
+                tools:text="Hamster In Butt  " />
+
+            <TextView
+                android:id="@+id/tvStatusIndicator"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/text_with_bullet"
+                android:textSize="@dimen/indicator_size"
+                app:layout_constraintStart_toStartOf="@+id/tvName"
+                app:layout_constraintTop_toBottomOf="@+id/tvName" />
 
             <TextView
                 android:id="@+id/tvStatus"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:maxLines="2"
-                android:paddingStart="@dimen/margin_small"
-                android:paddingEnd="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_small"
                 android:textColor="@color/colorPrimaryText"
-                android:textSize="@dimen/text_size"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/tvLabelStatus"
+                app:layout_constraintBottom_toBottomOf="@+id/tvStatusIndicator"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/tvLabelStatus"
-                app:layout_constraintTop_toTopOf="@+id/tvLabelStatus"
-                tools:text="Alive" />
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/tvStatusIndicator"
+                app:layout_constraintTop_toBottomOf="@+id/tvName"
+                tools:text="Mr. Celery  Friends" />
 
             <TextView
                 android:id="@+id/tvLabelSpecie"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_medium"
-                android:layout_marginBottom="17dp"
-                android:paddingStart="@dimen/margin_small"
-                android:paddingEnd="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_small"
                 android:text="@string/label_specie"
-                android:textColor="@color/colorPrimaryText"
-                android:textSize="@dimen/text_size"
+                android:textColor="@color/colorSecundaryText"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/tvLabelGender"
-                app:layout_constraintEnd_toStartOf="@+id/tvSpecie"
-                app:layout_constraintStart_toEndOf="@+id/image"
-                app:layout_constraintTop_toBottomOf="@+id/tvLabelStatus" />
+                app:layout_constraintStart_toStartOf="@+id/tvStatus"
+                app:layout_constraintTop_toBottomOf="@+id/tvStatus" />
 
             <TextView
                 android:id="@+id/tvSpecie"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:maxLines="2"
-                android:paddingStart="@dimen/margin_small"
-                android:paddingEnd="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_small"
                 android:textColor="@color/colorPrimaryText"
-                android:textSize="@dimen/text_size"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/tvLabelSpecie"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/tvLabelSpecie"
                 app:layout_constraintTop_toTopOf="@+id/tvLabelSpecie"
-                tools:text="Alive" />
+                tools:text="Shmlamantha Shmlicelli" />
 
             <TextView
                 android:id="@+id/tvLabelGender"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/margin_small"
-                android:paddingStart="@dimen/margin_small"
-                android:paddingEnd="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_extra_small"
                 android:text="@string/label_gender"
-                android:textColor="@color/colorPrimaryText"
-                android:textSize="@dimen/text_size"
+                android:textColor="@color/colorSecundaryText"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/tvGender"
-                app:layout_constraintStart_toEndOf="@+id/image"
+                app:layout_constraintBottom_toBottomOf="@+id/image"
+                app:layout_constraintStart_toStartOf="@+id/tvLabelSpecie"
                 app:layout_constraintTop_toBottomOf="@+id/tvLabelSpecie" />
 
             <TextView
                 android:id="@+id/tvGender"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:maxLines="2"
-                android:paddingStart="@dimen/margin_small"
-                android:paddingEnd="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_small"
                 android:textColor="@color/colorPrimaryText"
-                android:textSize="@dimen/text_size"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/tvLabelGender"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/tvLabelGender"
                 app:layout_constraintTop_toTopOf="@+id/tvLabelGender"
-                tools:text="Alive" />
+                tools:text="Male " />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

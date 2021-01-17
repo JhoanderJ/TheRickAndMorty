@@ -1,7 +1,9 @@
 package com.jhoander.therickandmorty.presentation.adapter
 
+import android.graphics.Color
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.jhoander.therickandmorty.R
 import com.jhoander.therickandmorty.domain.model.Character
@@ -41,6 +43,21 @@ class CharacterListAdapter :
             if (item == null) {
                 itemView.visibility = View.GONE
                 return
+            }
+            if (item.status.equals("Alive")) {
+                itemView.tvStatusIndicator.setTextColor(
+                    ContextCompat.getColor(
+                        itemView.context,
+                        R.color.colorGreen
+                    )
+                )
+            } else if (item.status.equals("Dead")) {
+                itemView.tvStatusIndicator.setTextColor(
+                    ContextCompat.getColor(
+                        itemView.context,
+                        R.color.colorRed
+                    )
+                )
             }
             itemView.tvName.text = item.name
             itemView.tvGender.text = item.gender

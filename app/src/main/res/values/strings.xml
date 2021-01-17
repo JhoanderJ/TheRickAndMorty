@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">TheRickAndMorty</string>
     <string name="name_toolbar">The Rick And Morty</string>
-    <string name="label_status">State:</string>
+    <string name="text_with_bullet">\u2022</string>
     <string name="label_specie">Specie:</string>
     <string name="label_gender">Gender:</string>
 </resources>
